@@ -1,9 +1,10 @@
 name: ci-nodejs-workflow
-on: [push]
-  jobs:
-    check-application:
-      runs-on: ubuntu-latest
-      steps:
+'on':
+  - push
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup node
